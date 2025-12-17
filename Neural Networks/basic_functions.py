@@ -24,3 +24,4 @@ def softmax(x):
     x_sum = np.sum(x_exp, axis = 1,keepdims = True)
     s = x_exp/x_sum
     return s
+## np.dot(x1,x2) np.outer(x1,x2) np.multiply(x1,x2) np.dot(W,x1)
