@@ -20,8 +20,15 @@ def normalizeRows(x1):
   return x1
 
 def softmax(x):
-    x_exp = np.exp(x)
-    x_sum = np.sum(x_exp, axis = 1,keepdims = True)
-    s = x_exp/x_sum
-    return s
+  x_exp = np.exp(x)
+  x_sum = np.sum(x_exp, axis = 1,keepdims = True)
+  s = x_exp/x_sum
+  return s
 ## np.dot(x1,x2) np.outer(x1,x2) np.multiply(x1,x2) np.dot(W,x1)
+def L1(yhat, y):
+  loss = np.sum(np.abs(y-yhat))
+  return loss
+
+def L2(yhat, y):
+  loss = np.sum((y-yhat)**2)
+  return loss
